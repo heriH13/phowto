@@ -14,6 +14,15 @@
 		DFCDDB3527FD74E200098ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCDDB3427FD74E200098ABA /* Assets.xcassets */; };
 		DFCDDB3827FD74E200098ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCDDB3627FD74E200098ABA /* LaunchScreen.storyboard */; };
 		DFCDDB4C27FDBA4F00098ABA /* ReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB4B27FDBA4F00098ABA /* ReflectionViewController.swift */; };
+		DFCDDB4E27FDBA8400098ABA /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB4D27FDBA8400098ABA /* CompareViewController.swift */; };
+		DFCDDB5027FDBA9100098ABA /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB4F27FDBA9100098ABA /* DescriptionViewController.swift */; };
+		DFCDDB5227FDBA9B00098ABA /* MyAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB5127FDBA9B00098ABA /* MyAlbumViewController.swift */; };
+		DFCDDB5427FDBB9B00098ABA /* AlbumPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB5327FDBB9B00098ABA /* AlbumPageViewController.swift */; };
+		DFCDDB5627FDBBA400098ABA /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB5527FDBBA400098ABA /* SearchPageViewController.swift */; };
+		DFCDDB5827FDBBAE00098ABA /* WatchVisualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB5727FDBBAE00098ABA /* WatchVisualViewController.swift */; };
+		DFCDDB5A27FDBBB700098ABA /* SelectedModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB5927FDBBB700098ABA /* SelectedModuleViewController.swift */; };
+		DFCDDB5C27FDBBC200098ABA /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB5B27FDBBC200098ABA /* HomePageViewController.swift */; };
+		DFCDDB5E27FDBBCD00098ABA /* LauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB5D27FDBBCD00098ABA /* LauncherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		DFCDDB3727FD74E200098ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFCDDB3927FD74E200098ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFCDDB4B27FDBA4F00098ABA /* ReflectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionViewController.swift; sourceTree = "<group>"; };
+		DFCDDB4D27FDBA8400098ABA /* CompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
+		DFCDDB4F27FDBA9100098ABA /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		DFCDDB5127FDBA9B00098ABA /* MyAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumViewController.swift; sourceTree = "<group>"; };
+		DFCDDB5327FDBB9B00098ABA /* AlbumPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageViewController.swift; sourceTree = "<group>"; };
+		DFCDDB5527FDBBA400098ABA /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
+		DFCDDB5727FDBBAE00098ABA /* WatchVisualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchVisualViewController.swift; sourceTree = "<group>"; };
+		DFCDDB5927FDBBB700098ABA /* SelectedModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedModuleViewController.swift; sourceTree = "<group>"; };
+		DFCDDB5B27FDBBC200098ABA /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		DFCDDB5D27FDBBCD00098ABA /* LauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +100,7 @@
 		DFCDDB3F27FDB83100098ABA /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB5D27FDBBCD00098ABA /* LauncherViewController.swift */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -89,6 +108,7 @@
 		DFCDDB4027FDB84C00098ABA /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB5B27FDBBC200098ABA /* HomePageViewController.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -96,6 +116,7 @@
 		DFCDDB4127FDB85900098ABA /* SelectedModule */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB5927FDBBB700098ABA /* SelectedModuleViewController.swift */,
 			);
 			path = SelectedModule;
 			sourceTree = "<group>";
@@ -103,6 +124,7 @@
 		DFCDDB4227FDB86300098ABA /* WatchVisual */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB5727FDBBAE00098ABA /* WatchVisualViewController.swift */,
 			);
 			path = WatchVisual;
 			sourceTree = "<group>";
@@ -110,6 +132,7 @@
 		DFCDDB4327FDB86E00098ABA /* SearchPage */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB5527FDBBA400098ABA /* SearchPageViewController.swift */,
 			);
 			path = SearchPage;
 			sourceTree = "<group>";
@@ -117,6 +140,7 @@
 		DFCDDB4427FDB87E00098ABA /* AlbumPage */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB5327FDBB9B00098ABA /* AlbumPageViewController.swift */,
 			);
 			path = AlbumPage;
 			sourceTree = "<group>";
@@ -124,6 +148,7 @@
 		DFCDDB4527FDB88600098ABA /* MyAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB5127FDBA9B00098ABA /* MyAlbumViewController.swift */,
 			);
 			path = MyAlbum;
 			sourceTree = "<group>";
@@ -131,6 +156,7 @@
 		DFCDDB4827FDB8AC00098ABA /* DescriptionPage */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB4F27FDBA9100098ABA /* DescriptionViewController.swift */,
 			);
 			path = DescriptionPage;
 			sourceTree = "<group>";
@@ -138,6 +164,7 @@
 		DFCDDB4927FDB8CF00098ABA /* ComparePage */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB4D27FDBA8400098ABA /* CompareViewController.swift */,
 			);
 			path = ComparePage;
 			sourceTree = "<group>";
@@ -223,8 +250,17 @@
 			files = (
 				DFCDDB3027FD74E200098ABA /* ViewController.swift in Sources */,
 				DFCDDB2C27FD74E200098ABA /* AppDelegate.swift in Sources */,
+				DFCDDB5227FDBA9B00098ABA /* MyAlbumViewController.swift in Sources */,
+				DFCDDB5A27FDBBB700098ABA /* SelectedModuleViewController.swift in Sources */,
+				DFCDDB4E27FDBA8400098ABA /* CompareViewController.swift in Sources */,
+				DFCDDB5027FDBA9100098ABA /* DescriptionViewController.swift in Sources */,
+				DFCDDB5427FDBB9B00098ABA /* AlbumPageViewController.swift in Sources */,
+				DFCDDB5827FDBBAE00098ABA /* WatchVisualViewController.swift in Sources */,
+				DFCDDB5C27FDBBC200098ABA /* HomePageViewController.swift in Sources */,
+				DFCDDB5627FDBBA400098ABA /* SearchPageViewController.swift in Sources */,
 				DFCDDB2E27FD74E200098ABA /* SceneDelegate.swift in Sources */,
 				DFCDDB4C27FDBA4F00098ABA /* ReflectionViewController.swift in Sources */,
+				DFCDDB5E27FDBBCD00098ABA /* LauncherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
