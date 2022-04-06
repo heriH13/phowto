@@ -56,6 +56,16 @@
 		DFCDDB2A27FD74E200098ABA /* Phowto */ = {
 			isa = PBXGroup;
 			children = (
+				DFCDDB4A27FDB8D500098ABA /* ReflectionPage */,
+				DFCDDB4927FDB8CF00098ABA /* ComparePage */,
+				DFCDDB4827FDB8AC00098ABA /* DescriptionPage */,
+				DFCDDB4527FDB88600098ABA /* MyAlbum */,
+				DFCDDB4427FDB87E00098ABA /* AlbumPage */,
+				DFCDDB4327FDB86E00098ABA /* SearchPage */,
+				DFCDDB4227FDB86300098ABA /* WatchVisual */,
+				DFCDDB4127FDB85900098ABA /* SelectedModule */,
+				DFCDDB4027FDB84C00098ABA /* Homepage */,
+				DFCDDB3F27FDB83100098ABA /* LaunchScreen */,
 				DFCDDB2B27FD74E200098ABA /* AppDelegate.swift */,
 				DFCDDB2D27FD74E200098ABA /* SceneDelegate.swift */,
 				DFCDDB2F27FD74E200098ABA /* ViewController.swift */,
@@ -65,6 +75,76 @@
 				DFCDDB3927FD74E200098ABA /* Info.plist */,
 			);
 			path = Phowto;
+			sourceTree = "<group>";
+		};
+		DFCDDB3F27FDB83100098ABA /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		DFCDDB4027FDB84C00098ABA /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		DFCDDB4127FDB85900098ABA /* SelectedModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SelectedModule;
+			sourceTree = "<group>";
+		};
+		DFCDDB4227FDB86300098ABA /* WatchVisual */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WatchVisual;
+			sourceTree = "<group>";
+		};
+		DFCDDB4327FDB86E00098ABA /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchPage;
+			sourceTree = "<group>";
+		};
+		DFCDDB4427FDB87E00098ABA /* AlbumPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlbumPage;
+			sourceTree = "<group>";
+		};
+		DFCDDB4527FDB88600098ABA /* MyAlbum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyAlbum;
+			sourceTree = "<group>";
+		};
+		DFCDDB4827FDB8AC00098ABA /* DescriptionPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DescriptionPage;
+			sourceTree = "<group>";
+		};
+		DFCDDB4927FDB8CF00098ABA /* ComparePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ComparePage;
+			sourceTree = "<group>";
+		};
+		DFCDDB4A27FDB8D500098ABA /* ReflectionPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReflectionPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
