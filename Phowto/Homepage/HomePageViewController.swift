@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var thisWidth:CGFloat = 0
     var contents : [Content] = [
@@ -18,17 +18,23 @@ class HomePageViewController: UIViewController,UICollectionViewDelegate,UICollec
  
     @IBOutlet weak var carouselCollectionView: UICollectionView!
     @IBOutlet weak var carouselPageControl: UIPageControl!
-    var thisWidth:CGFloat = 0
+    
    override func viewDidLoad() {
         super.viewDidLoad()
         carouselCollectionView.delegate = self
         
         carouselCollectionView.dataSource = self
-      
-
+       
+       carouselPageControl.addTarget(self, action: #selector(pageControlDidChange(_:)), for: .valueChanged)
+    
         // Do any additional setup after loading the view.
     }
 
+        
+    @objc private func pageControlDidChange(_ sender: UIPageControl){
+        let current = sender.currentPage
+        carouselCollectionView.setContentOffset(CGPoint(x: CGFloat(current) * carouselCollectionView.frame.size.width, y: 0), animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return contents.count
     }
@@ -52,16 +58,27 @@ class HomePageViewController: UIViewController,UICollectionViewDelegate,UICollec
         self.carouselPageControl.currentPage = indexPath.section
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        contents.count
+    func testing(_ collection: UICollectionView){
+        let test = collection.frame.size.width
+        
+        let test2 = collection.contentSize.width
+        
+        let test3 = collection.contentOffset.x
+        if(test3 + test == test2){
+            print("test2")
+        }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        thisWidth = CGFloat(self.frame.width)
-        
-        return CGSize(width: thisWidth, height: self.frame.height)
-    }
+    
+
 //    func colle
 }
 
+
+//extension HomePageViewController: UICollectionViewDelegate, UIScrollViewDelegate{
+//
+//    func scrollViewDidScroll(_ scrollView: UIScrollView){
+//        carouselPageControl.currentPage = Int(floorf(Float(collectionView.contentOffset.x) / Float(carouselView.frame.size.width)))
+//    }
+//
+//}

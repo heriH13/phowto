@@ -74,13 +74,9 @@
                                     <constraint firstAttribute="trailing" secondItem="zUM-ji-Qgq" secondAttribute="trailing" id="fvf-gq-LeJ"/>
                                 </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A8N-bo-9wN">
-                                <rect key="frame" x="59.5" y="265.5" width="295" height="365"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A8N-bo-9wN">
+                                <rect key="frame" x="16" y="161" width="382" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="365" id="GWG-cp-WCq"/>
-                                    <constraint firstAttribute="width" constant="295" id="ZQH-pv-Qck"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ct8-o5-o5X">
                                     <size key="itemSize" width="271" height="357"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -89,7 +85,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="contentView" id="JxU-T4-brO" customClass="CollectionViewCell" customModule="Phowto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="4" width="271" height="357"/>
+                                        <rect key="frame" x="0.0" y="108.5" width="271" height="357"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5MO-v2-OXG">
                                             <rect key="frame" x="0.0" y="0.0" width="271" height="357"/>
@@ -141,9 +137,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-1u-jeQ">
-                                <rect key="frame" x="143" y="638" width="116" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-1u-jeQ">
+                                <rect key="frame" x="116" y="771" width="116" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="linkColor"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="labelColor"/>
                             </pageControl>
@@ -151,11 +146,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="I8E-1u-jeQ" secondAttribute="bottom" constant="65" id="7xX-db-pH4"/>
                             <constraint firstItem="A8N-bo-9wN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9Fz-8h-HYA"/>
                             <constraint firstItem="A8N-bo-9wN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Djq-6b-8tP"/>
                             <constraint firstItem="YWb-CW-UA6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="a2i-R1-7F7"/>
                             <constraint firstItem="YWb-CW-UA6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bbI-vc-mcL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A8N-bo-9wN" secondAttribute="trailing" constant="16" id="eKU-SP-rIA"/>
                             <constraint firstAttribute="trailing" secondItem="YWb-CW-UA6" secondAttribute="trailing" id="gDy-Lo-SW4"/>
+                            <constraint firstItem="A8N-bo-9wN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ghW-F0-KfQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -169,7 +167,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="man" width="2866" height="3582"/>
+        <image name="man" width="7952" height="5304"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
