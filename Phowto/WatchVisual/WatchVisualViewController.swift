@@ -11,65 +11,87 @@ import UIKit
 class WatchVisualViewController : UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     @IBOutlet weak var btnTry: UIImageView!
-    
     @IBOutlet weak var openPage: UIButton!
     //****
-    @IBOutlet weak var tesBtn: UIButton!
     @IBOutlet weak var tesImgView: UIImageView!
     
     @IBOutlet weak var nextViewBtn: UIView!
+    @IBOutlet weak var prevViewBtn: UIView!
     
     var currModule = 0
     var nextModule = 0
+    let nextSt = "next"
+    let prevSt = "prev"
     
     let assetArray = ["Asset 14", "Asset 15", "Asset 16"]
     //****
     var imageData : UIImage?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(WatchVisualViewController.tryTapped(gesture:)))
-        let tapTouch = UITapGestureRecognizer(target: self, action: #selector(tesNextModule(_:)))
-        nextViewBtn.addGestureRecognizer(tapTouch)
-        btnTry.addGestureRecognizer(tapGesture)
-        btnTry.isUserInteractionEnabled = true
+        setUpViewBtn()
+        setupGesture()
+        
         tesImgView.image = UIImage.init(named: assetArray[0])
         nextModule = 1
-        tesBtn.addTarget(self, action: #selector(tesNextModule(_: )), for: .touchUpInside)
-        
         openPage.addTarget(self, action: #selector(openPagePressed(_: )), for: .touchUpInside)
     }
     
-    @objc func tesNextModule(_ sender : UIButton){
-        if nextModule < assetArray.count-1 {
-            currModule = nextModule
-            nextModule += 1
-//            tesImgView.image = UIImage.init(named: assetArray[currModule])
-            
-            animateImage(currModule)
-            
-//            UIView.transition(with: self.tesImgView,
-//                              duration: 1.0,
-//                              options: .transitionFlipFromRight,
-//                              animations: {
-//                self.tesImgView.image = UIImage.init(named: self.assetArray[self.currModule])
-//            }, completion: nil)
-            
+    func setUpViewBtn(){
+        prevViewBtn.translatesAutoresizingMaskIntoConstraints = false
+        prevViewBtn.frame =  CGRect(x: 0, y: 0 , width: UIScreen.main.bounds.width / 2, height: 500)
+//        prevViewBtn.backgroundColor = .blue
+        
+        nextViewBtn.translatesAutoresizingMaskIntoConstraints = false
+        nextViewBtn.frame =  CGRect(x: UIScreen.main.bounds.width / 2, y: 0 , width: UIScreen.main.bounds.width / 2, height: 500)
+//        nextViewBtn.backgroundColor = .red
+    }
+    
+    func setupGesture(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(WatchVisualViewController.tryTapped(gesture:)))
+        let nextTouch = UITapGestureRecognizer(target: self, action: #selector(nextModule(_:)))
+        let prevTouch = UITapGestureRecognizer(target: self, action: #selector(prevModule(_:)))
+        prevViewBtn.addGestureRecognizer(prevTouch)
+        nextViewBtn.addGestureRecognizer(nextTouch)
+        btnTry.addGestureRecognizer(tapGesture)
+        btnTry.isUserInteractionEnabled = true
+    }
+    
+    @objc func  prevModule(_ sender : UIButton){
+        if currModule > assetArray.startIndex {
+            currModule -= 1
+            animateImage(currModule, prevSt)
         } else {
-            currModule = nextModule
-//            tesImgView.image = UIImage.init(named: assetArray[currModule])
-            nextModule = 0
-            animateImage(currModule)
+            print("************ HIT THE FIRST INDEX")
         }
     }
     
-    func animateImage(_ currModule: Int){
-        UIView.transition(with: self.tesImgView,
-                          duration: 1.0,
-                          options: .transitionFlipFromRight,
-                          animations: {
-            self.tesImgView.image = UIImage.init(named: self.assetArray[currModule])
-        }, completion: nil)
+    @objc func nextModule(_ sender : UIButton){
+        if currModule < assetArray.count-1 {
+            currModule += 1
+            animateImage(currModule, nextSt)
+        } else {
+            print("************ HIT THE LAST INDEX")
+        }
+    }
+    
+    func animateImage(_ currModule: Int, _ nextOrPrev : String){
+        if nextOrPrev == nextSt {
+            UIView.transition(with: self.tesImgView,
+                              duration: 0.8,
+                              options: .transitionFlipFromRight,
+                              animations: {
+                self.tesImgView.image = UIImage.init(named: self.assetArray[currModule])
+            }, completion: nil)
+        } else {
+            UIView.transition(with: self.tesImgView,
+                              duration: 0.8,
+                              options: .transitionFlipFromLeft,
+                              animations: {
+                self.tesImgView.image = UIImage.init(named: self.assetArray[currModule])
+            }, completion: nil)
+        }
     }
     
     @objc func tryTapped(gesture: UIGestureRecognizer) {
@@ -96,6 +118,10 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         self.performSegue(withIdentifier: "segueCompare", sender: nil)
     }
     
+    func navigateNext() async {
+        self.performSegue(withIdentifier: "segueCompare", sender: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
 
@@ -110,7 +136,6 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         }
         
         imageData = image
-//        self.performSegue(withIdentifier: "tesCompareSB", sender: nil)
         print(image.size)
     }
     
@@ -119,7 +144,6 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
             else {
                 return
         }
-        
         destination.imageData = imageData
     }
 }

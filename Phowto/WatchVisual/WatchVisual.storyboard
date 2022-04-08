@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyk-p7-Lpy">
-                                <rect key="frame" x="327" y="756" width="67" height="37"/>
+                                <rect key="frame" x="166" y="489" width="67" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
@@ -34,33 +34,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asset 153" translatesAutoresizingMaskIntoConstraints="NO" id="xrb-dW-sSO">
-                                <rect key="frame" x="79" y="710" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sU-M2-BWx">
                                 <rect key="frame" x="79" y="219" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocx-yv-r5O">
-                                <rect key="frame" x="60" y="466" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTU-vs-3bl">
-                                <rect key="frame" x="218" y="64" width="196" height="494"/>
+                                <rect key="frame" x="343" y="44" width="51" height="494"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2R-Ct-4ot">
+                                <rect key="frame" x="0.0" y="67" width="101" height="369"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 153" translatesAutoresizingMaskIntoConstraints="NO" id="xrb-dW-sSO">
+                                <rect key="frame" x="95" y="784" width="2340" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="ZMU-V9-MI2"/>
+                                    <constraint firstAttribute="width" constant="164" id="sDX-uj-0f5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xrb-dW-sSO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="95" id="100-rt-xbG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xrb-dW-sSO" secondAttribute="trailing" constant="95" id="XkU-61-YHb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xrb-dW-sSO" secondAttribute="bottom" constant="35" id="v4n-fU-bH9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btnTry" destination="xrb-dW-sSO" id="bOJ-C7-UH8"/>
                         <outlet property="nextViewBtn" destination="bTU-vs-3bl" id="sUA-3O-ANa"/>
                         <outlet property="openPage" destination="vyk-p7-Lpy" id="0OT-hp-KJE"/>
-                        <outlet property="tesBtn" destination="ocx-yv-r5O" id="mGO-4F-l93"/>
+                        <outlet property="prevViewBtn" destination="c2R-Ct-4ot" id="lDs-Kr-FZF"/>
                         <outlet property="tesImgView" destination="3sU-M2-BWx" id="Jw6-PR-Zb5"/>
                     </connections>
                 </viewController>
