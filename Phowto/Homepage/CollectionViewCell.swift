@@ -13,16 +13,19 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var contentImage: UIImageView!
     
-    
     @IBOutlet weak var contentButton: UIButton!
     
-    func display(image: UIImage,
-                 buttonTitle: String) {
-        contentImage.image = image
-        contentButton.setTitle(buttonTitle, for: .normal)
-        
+    var dataDisplayed: Content? {
+        didSet {
+            setupView()
+        }
     }
     
-    
+    func setupView() {
+        if let data = dataDisplayed {
+            contentImage.image = UIImage(named: data.image ?? "")
+            contentButton.setTitle(data.name, for: .normal)
+        }
+    }
     
 }
