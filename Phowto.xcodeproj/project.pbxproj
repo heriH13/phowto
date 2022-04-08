@@ -134,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				DFCDDB5727FDBBAE00098ABA /* WatchVisualViewController.swift */,
+				DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */,
+				DF00F28127FF483A00A41263 /* TesCompare.storyboard */,
+				DF00F28327FF488C00A41263 /* TesCompareVC.swift */,
 			);
 			path = WatchVisual;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				BA41FB7227FF171E00F7A0F9 /* HomePage.storyboard in Resources */,
 				DFCDDB3827FD74E200098ABA /* LaunchScreen.storyboard in Resources */,
+				DF00F28227FF483A00A41263 /* TesCompare.storyboard in Resources */,
 				DFCDDB3527FD74E200098ABA /* Assets.xcassets in Resources */,
 				DFCDDB3327FD74E200098ABA /* Main.storyboard in Resources */,
 			);
@@ -268,6 +272,7 @@
 				DFCDDB5427FDBB9B00098ABA /* AlbumPageViewController.swift in Sources */,
 				DFCDDB5827FDBBAE00098ABA /* WatchVisualViewController.swift in Sources */,
 				DFCDDB5C27FDBBC200098ABA /* HomePageViewController.swift in Sources */,
+				DF00F28427FF488C00A41263 /* TesCompareVC.swift in Sources */,
 				DFCDDB5627FDBBA400098ABA /* SearchPageViewController.swift in Sources */,
 				BA41FB7427FF252C00F7A0F9 /* CollectionViewCell.swift in Sources */,
 				DFCDDB2E27FD74E200098ABA /* SceneDelegate.swift in Sources */,
