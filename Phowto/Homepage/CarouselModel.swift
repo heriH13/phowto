@@ -9,5 +9,6 @@ import Foundation
 struct Content{
     var image: String?
     var name: String?
+    var id: String?
     
 }

@@ -9,11 +9,13 @@ import UIKit
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    \
+    @IBOutlet weak var coba_saja: UILabel!
     var thisWidth:CGFloat = 0
     var contents : [Content] = [
-        Content(image: "man", name: "ini gambar nomor 1"),
-        Content(image: "man", name: "2"),
-        Content(image: "man", name: "3")
+        Content(image: "Module 02", name: "Learn about Bokeh", id: "1"),
+        Content(image: "Module 03", name: "Understanding Composition", id: "2"),
+        Content(image: "Module 08", name: "Well exposed Images ", id: "3")
     ]
  
     @IBOutlet weak var carouselCollectionView: UICollectionView!
@@ -58,17 +60,12 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         self.carouselPageControl.currentPage = indexPath.section
     }
     
-    func testing(_ collection: UICollectionView){
-        let test = collection.frame.size.width
-        
-        let test2 = collection.contentSize.width
-        
-        let test3 = collection.contentOffset.x
-        if(test3 + test == test2){
-            print("test2")
-        }
-    }
     
+    @IBAction func chooseModule(_ sender: Any) {
+//        performSegue(withIdentifier: "goToAlternateStoryboard", sender: self)
+        
+        
+    }
     
 
 //    func colle

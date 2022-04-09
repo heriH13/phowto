@@ -25,6 +25,8 @@ class CollectionViewCell: UICollectionViewCell {
         if let data = dataDisplayed {
             contentImage.image = UIImage(named: data.image ?? "")
             contentButton.setTitle(data.name, for: .normal)
+            contentButton.restorationIdentifier = data.id
+            
         }
     }
     
