@@ -155,7 +155,10 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
     
     @objc func openPagePressed(_ sender : UIButton){
         
-        saveImage(imageData!)
+        guard let a = imageData else { print("******* NO IMAGE TO BE SAVED")
+            return }
+//        saveImage(imageData!)
+        saveImage(a)
         self.performSegue(withIdentifier: "segueCompare", sender: nil)
     }
     
@@ -189,6 +192,7 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
             else {
                 return
         }
+        destination.modalPresentationStyle = .fullScreen
         destination.imageData = imageData
     }
 }

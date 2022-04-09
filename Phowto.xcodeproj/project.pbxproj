@@ -10,6 +10,7 @@
 		DF00F28027FF0C4600A41263 /* WatchVisual.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */; };
 		DF00F28227FF483A00A41263 /* TesCompare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF00F28127FF483A00A41263 /* TesCompare.storyboard */; };
 		DF00F28427FF488C00A41263 /* TesCompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00F28327FF488C00A41263 /* TesCompareVC.swift */; };
+		DF8862BF2801909C00882450 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8862BE2801909C00882450 /* GridView.swift */; };
 		DFCDDB2C27FD74E200098ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB2B27FD74E200098ABA /* AppDelegate.swift */; };
 		DFCDDB2E27FD74E200098ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB2D27FD74E200098ABA /* SceneDelegate.swift */; };
 		DFCDDB3027FD74E200098ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB2F27FD74E200098ABA /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchVisual.storyboard; sourceTree = "<group>"; };
 		DF00F28127FF483A00A41263 /* TesCompare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TesCompare.storyboard; sourceTree = "<group>"; };
 		DF00F28327FF488C00A41263 /* TesCompareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesCompareVC.swift; sourceTree = "<group>"; };
+		DF8862BE2801909C00882450 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		DFCDDB2827FD74E200098ABA /* Phowto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phowto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCDDB2B27FD74E200098ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCDDB2D27FD74E200098ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */,
 				DF00F28127FF483A00A41263 /* TesCompare.storyboard */,
 				DF00F28327FF488C00A41263 /* TesCompareVC.swift */,
+				DF8862BE2801909C00882450 /* GridView.swift */,
 			);
 			path = WatchVisual;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				DFCDDB5627FDBBA400098ABA /* SearchPageViewController.swift in Sources */,
 				DFCDDB2E27FD74E200098ABA /* SceneDelegate.swift in Sources */,
 				DFCDDB4C27FDBA4F00098ABA /* ReflectionViewController.swift in Sources */,
+				DF8862BF2801909C00882450 /* GridView.swift in Sources */,
 				DFCDDB5E27FDBBCD00098ABA /* LauncherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
