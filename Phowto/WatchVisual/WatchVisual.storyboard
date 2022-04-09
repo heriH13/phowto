@@ -47,7 +47,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 153" translatesAutoresizingMaskIntoConstraints="NO" id="xrb-dW-sSO">
-                                <rect key="frame" x="95" y="784" width="2340" height="43"/>
+                                <rect key="frame" x="95" y="784" width="780" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="ZMU-V9-MI2"/>
                                     <constraint firstAttribute="width" constant="164" id="sDX-uj-0f5"/>
@@ -86,7 +86,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Asset 153" width="2340" height="613"/>
+        <image name="Asset 153" width="780" height="204.33332824707031"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

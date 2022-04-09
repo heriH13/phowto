@@ -33,7 +33,6 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         super.viewDidLoad()
         setUpViewBtn()
         setupGesture()
-        
         tesImgView.image = UIImage.init(named: assetArray[0])
         nextModule = 1
         openPage.addTarget(self, action: #selector(openPagePressed(_: )), for: .touchUpInside)
@@ -103,7 +102,9 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
             vc.showsCameraControls = true
     //        vc.allowsEditing = true
             vc.delegate = self
+            vc.view.sizeToFit()
 //            vc.cameraOverlayView = self.addOverlay()
+//            cameraGrid.inputViewController?.dismiss(animated: true)
             present(vc, animated: true)
             }
     }
@@ -155,10 +156,10 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
     
     @objc func openPagePressed(_ sender : UIButton){
         
-        guard let a = imageData else { print("******* NO IMAGE TO BE SAVED")
+        guard let image = imageData else { print("******* NO IMAGE TO BE SAVED")
             return }
 //        saveImage(imageData!)
-        saveImage(a)
+        saveImage(image)
         self.performSegue(withIdentifier: "segueCompare", sender: nil)
     }
     
