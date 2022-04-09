@@ -18,6 +18,8 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
     @IBOutlet weak var nextViewBtn: UIView!
     @IBOutlet weak var prevViewBtn: UIView!
     
+    var cameraGrid : UIView!
+    
     var currModule = 0
     var nextModule = 0
     let nextSt = "next"
@@ -26,7 +28,6 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
     let assetArray = ["Asset 14", "Asset 15", "Asset 16"]
     //****
     var imageData : UIImage?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,14 +96,52 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
     }
     
     @objc func tryTapped(gesture: UIGestureRecognizer) {
+        cameraGrid = UIView()
         if gesture.view is UIImageView {
             let vc = UIImagePickerController()
             vc.sourceType = .camera
             vc.showsCameraControls = true
     //        vc.allowsEditing = true
             vc.delegate = self
+//            vc.cameraOverlayView = self.addOverlay()
             present(vc, animated: true)
             }
+    }
+    
+    func addOverlay() -> UIView? {
+//        self.addLine(cameraGrid)
+        self.addGridView(cameraView: cameraGrid)
+        cameraGrid.frame = self.view.frame
+        return cameraGrid
+    }
+    
+//    func addLine(_ cameraView: UIView){
+//        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height), cornerRadius: 0)
+//        path.usesEvenOddFillRule = true
+//        let line = CGRect(x: 200, y: 0.0, width: UIScreen.main.bounds.width, height: 500)
+//
+//        let fillLayer = CAShapeLayer()
+//        fillLayer.path = path.cgPath
+//        fillLayer.fillRule = .evenOdd
+//        fillLayer.opacity = 0.7
+//
+//        cameraView.layer.addSublayer(fillLayer)
+////        cameraView.draw(line)
+////        cameraGrid.backgroundColor = .red
+//    }
+    
+    func addGridView(cameraView: UIView) {
+     let horizontalMargin = cameraView.bounds.size.width / 4
+     let verticalMargin = cameraView.bounds.size.height / 4
+
+     let gridView = GridView()
+         gridView.translatesAutoresizingMaskIntoConstraints = false
+         cameraView.addSubview(gridView)
+         gridView.backgroundColor = UIColor.clear
+         gridView.leftAnchor.constraint(equalTo: cameraView.leftAnchor, constant: horizontalMargin).isActive = true
+         gridView.rightAnchor.constraint(equalTo: cameraView.rightAnchor, constant: -1 * horizontalMargin).isActive = true
+         gridView.topAnchor.constraint(equalTo: cameraView.topAnchor, constant: verticalMargin).isActive = true
+         gridView.bottomAnchor.constraint(equalTo: cameraView.bottomAnchor, constant: -1 * verticalMargin).isActive = true
     }
     
     @objc func buttonPressed(_ sender : UIButton){
@@ -115,6 +154,8 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
     }
     
     @objc func openPagePressed(_ sender : UIButton){
+        
+        saveImage(imageData!)
         self.performSegue(withIdentifier: "segueCompare", sender: nil)
     }
     
@@ -139,6 +180,10 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         print(image.size)
     }
     
+    func saveImage(_ image: UIImage){
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? TesCompareVC
             else {
