@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         window = UIWindow(windowScene: windowScene)
 
                 let root = UIStoryboard(name: "HomePage", bundle: nil)
-                let initialController = root.instantiateViewController(withIdentifier: "HomePageSB")
+                let initialController = root.instantiateViewController(withIdentifier: "Navigation")
         
                 window?.rootViewController = initialController
                         window?.makeKeyAndVisible()

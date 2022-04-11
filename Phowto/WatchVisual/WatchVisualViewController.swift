@@ -49,17 +49,17 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         }
         
         imageData = image
-//        self.performSegue(withIdentifier: "tesCompareSB", sender: nil)
+//        self.performSegue(withIdentifier: "tesCompareSB", sender: nil) v
         print(image.size)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? TesCompareVC
-            else {
-                return
-        }
-        
-        destination.imageData = imageData
-    }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let destination = segue.destination as? TesCompareVC
+//            else {
+//                return
+//        }
+//
+//        destination.imageData = imageData
+//    }
     
 }

@@ -11,9 +11,10 @@ import UIKit
 
 class SubModuleViewCell: UITableViewCell {
     
-    @IBOutlet weak var subModuleName: UILabel!
     
-    @IBOutlet weak var subModuleProgress: UILabel!
+    @IBOutlet weak var subModuleName: UILabel!
+ 
+    @IBOutlet weak var subModuleProgress: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

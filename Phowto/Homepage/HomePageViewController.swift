@@ -15,7 +15,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     var database : Content?
     @IBOutlet weak var percobaan: UIImageView!
     var contents : [Content] = [
-        Content(image: "Module 02", name: "Learn about Bokeh", id: "1", SubModule: [
+        Content(image: "Module 03",name: "Understanding Composition", id: "1", description: "Good Composition makes your picture alive",image_crop: "Asset 21 crop", SubModule: [
             SubModuleContent(subModuleName :"What is Composition?", content: [
                 "When you take photos, do you ever feel bored with the photos? Now you can get creative with composition techniques!",
                 """
@@ -46,8 +46,8 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         ]
               
                ),
-        Content(image: "Module 03", name: "Understanding Composition", id: "2", SubModule: [SubModuleContent(content: [])]),
-        Content(image: "Module 08", name: "Well exposed Images ", id: "3", SubModule: [SubModuleContent(content: [])])
+        Content(image: "Module 02", name: "Learn about Bokeh", id: "2",description: "belum masuk", image_crop: "Asset 22 crop", SubModule: [SubModuleContent(content: [])]),
+        Content(image: "Module 08", name: "Well exposed Images ", id: "3", description: "belum masuk", image_crop: "Asset 07 crop",SubModule: [SubModuleContent(content: [])])
     ]
  
     @IBOutlet weak var carouselCollectionView: UICollectionView!
@@ -95,34 +95,27 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
       
-        database = contents[indexPath.item]
+        database = contents[indexPath.row]
         
         
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectedModuleSB") as! SelectedModuleViewController
-//        vc.database = database
-//        self.navigationController?.pushViewController(vc, animated: false)
+    //        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectedModuleSB") as! SelectedModuleViewController
+    //        vc.database = database
+    //        self.navigationController?.pushViewController(vc, animated: false)
 
-        performSegue(withIdentifier: "SegueIdentifier", sender: nil)
+        performSegue(withIdentifier: "SegueIdentifier", sender: database)
     }
+
+    
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? SelectedModuleViewController
-            else {
-                return
-        }
+        if segue.identifier == "SegueIdentifier" {
+            let senderData = sender as? Content
+            let vc = segue.destination as? SelectedModuleViewController
+            vc?.database = senderData
 
-        destination.subModuleImage.image = UIImage(named: "Module 02")
+        }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "identifier" {
-//            let senderID = sender as? Content
-//            let vc = segue.destination as? SelectedModuleViewController
-//            vc?.database = senderID
-//
-//        }
-//    }
     
 
 

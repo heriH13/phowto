@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lA-eM-PPF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-CW-UA6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="151"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="151"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRG-vH-ud6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
@@ -83,7 +83,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A8N-bo-9wN">
-                                <rect key="frame" x="40" y="249" width="334" height="504"/>
+                                <rect key="frame" x="40" y="293" width="334" height="460"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="2" id="Ct8-o5-o5X">
                                     <size key="itemSize" width="314" height="392"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -92,7 +92,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="contentView" id="JxU-T4-brO" customClass="CollectionViewCell" customModule="Phowto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="314" height="392"/>
+                                        <rect key="frame" x="0.0" y="34" width="314" height="392"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UIh-6O-lAn">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="392"/>
@@ -169,6 +169,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A8N-bo-9wN" secondAttribute="trailing" constant="40" id="zXF-DP-42U"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Wfm-0Z-JT3"/>
                     <connections>
                         <outlet property="carouselCollectionView" destination="A8N-bo-9wN" id="yRR-f9-5M7"/>
                         <outlet property="carouselPageControl" destination="I8E-1u-jeQ" id="xir-oQ-tzo"/>
@@ -178,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73.913043478260875" y="97.767857142857139"/>
+            <point key="canvasLocation" x="984.05797101449286" y="97.767857142857139"/>
         </scene>
         <!--SelectedModuleSB-->
         <scene sceneID="uLg-EF-AsC">
@@ -188,7 +189,25 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQf-lE-T05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626" y="120"/>
+            <point key="canvasLocation" x="1534.7826086956522" y="119.86607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="onG-Ce-XUD">
+            <objects>
+                <navigationController storyboardIdentifier="Navigation" automaticallyAdjustsScrollViewInsets="NO" id="2lA-eM-PPF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hDx-eX-XWF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="pzG-fA-8kv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JqC-qK-e1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73.913043478260875" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
