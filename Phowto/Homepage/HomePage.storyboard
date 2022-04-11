@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -25,9 +26,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deR-X7-Gow">
-                                                <rect key="frame" x="344" y="0.0" width="50" height="31"/>
+                                                <rect key="frame" x="339.5" y="0.0" width="54.5" height="40.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="photo.artframe" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="photo.artframe" catalog="system" symbolScale="default"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ChooseSelectedModule:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RtB-bu-Wm7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,9 +119,6 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="Button">
                                                         <color key="baseBackgroundColor" name="AccentColor"/>
                                                     </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="chooseModule:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xFo-zB-Lu2"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -144,6 +148,10 @@
                                 <color key="pageIndicatorTintColor" systemColor="linkColor"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="labelColor"/>
                             </pageControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUT-yD-YVd">
+                                <rect key="frame" x="154" y="734" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -164,11 +172,23 @@
                     <connections>
                         <outlet property="carouselCollectionView" destination="A8N-bo-9wN" id="yRR-f9-5M7"/>
                         <outlet property="carouselPageControl" destination="I8E-1u-jeQ" id="xir-oQ-tzo"/>
+                        <outlet property="percobaan" destination="BUT-yD-YVd" id="XPG-GT-OH5"/>
+                        <segue destination="nul-et-PcH" kind="show" identifier="SegueIdentifier" id="5DL-VS-aMZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.913043478260875" y="97.767857142857139"/>
+        </scene>
+        <!--SelectedModuleSB-->
+        <scene sceneID="uLg-EF-AsC">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SelectedModuleMove" storyboardName="SelectedModule" referencedIdentifier="SelectedModuleSB" id="nul-et-PcH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T00-pE-b12"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQf-lE-T05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="120"/>
         </scene>
     </scenes>
     <resources>
