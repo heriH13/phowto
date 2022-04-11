@@ -26,6 +26,7 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
     let prevSt = "prev"
     
     let assetArray = ["Asset 14", "Asset 15", "Asset 16"]
+    let makeGifArr = ["Slide 10", "Slide 11", "Slide 12", "Slide 13", "Slide 14", "Slide 15", "Slide 16", "Slide 17"]
     //****
     var imageData : UIImage?
     
@@ -33,9 +34,21 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         super.viewDidLoad()
         setUpViewBtn()
         setupGesture()
-        tesImgView.image = UIImage.init(named: assetArray[0])
+//        tesImgView.image = UIImage.init(named: assetArray[0])
+        let arrOfImg : [UIImage] = [UIImage.init(named: makeGifArr[0])!,
+                                    UIImage.init(named: makeGifArr[1])!,
+                                    UIImage.init(named: makeGifArr[2])!,
+                                    UIImage.init(named: makeGifArr[3])!,
+                                    UIImage.init(named: makeGifArr[4])!,
+                                    UIImage.init(named: makeGifArr[5])!,
+                                    UIImage.init(named: makeGifArr[6])!,
+                                    UIImage.init(named: makeGifArr[7])!,
+                                    ]
+        let a = UIImage.animatedImage(with: arrOfImg, duration: 3)
+        tesImgView.image = a
         nextModule = 1
         openPage.addTarget(self, action: #selector(openPagePressed(_: )), for: .touchUpInside)
+        openPage.isHidden = true
     }
     
     func setUpViewBtn(){
@@ -56,6 +69,18 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         nextViewBtn.addGestureRecognizer(nextTouch)
         btnTry.addGestureRecognizer(tapGesture)
         btnTry.isUserInteractionEnabled = true
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipe))
+        swipeRight.direction = .left
+        self.view.addGestureRecognizer(swipeRight)
+    }
+                                                  
+    @objc func respondToSwipe(gesture : UIGestureRecognizer){
+        guard let image = imageData else { print("******* NO IMAGE TO BE SAVED")
+            return }
+        
+        saveImage(image)
+        self.performSegue(withIdentifier: "segueCompare", sender: nil)
     }
     
     @objc func  prevModule(_ sender : UIButton){
