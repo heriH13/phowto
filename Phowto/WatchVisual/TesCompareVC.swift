@@ -12,6 +12,7 @@ class TesCompareVC : UIViewController{
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var backBtn: UIButton!
     var imageData : UIImage?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,6 +32,19 @@ class TesCompareVC : UIViewController{
         super.viewDidLoad()
         imageView.image = imageData
         print("********** COMPARE OPENED")
+        setUpBackButton()
+    }
+    
+    func setUpBackButton(){
+        backBtn.setImage(UIImage.init(systemName: "chevron.left"), for: .normal)
+        backBtn.translatesAutoresizingMaskIntoConstraints = false
+        backBtn.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 5).isActive = true
+        backBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        backBtn.addTarget(self, action: #selector(backBtnPressed(_:)), for: .touchUpInside)
+    }
+    
+    @objc func backBtnPressed(_ sender : UIButton){
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

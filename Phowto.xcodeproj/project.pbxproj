@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF00F28027FF0C4600A41263 /* WatchVisual.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */; };
+		DF00F28227FF483A00A41263 /* TesCompare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF00F28127FF483A00A41263 /* TesCompare.storyboard */; };
+		DF00F28427FF488C00A41263 /* TesCompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00F28327FF488C00A41263 /* TesCompareVC.swift */; };
+		DF8862BF2801909C00882450 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8862BE2801909C00882450 /* GridView.swift */; };
 		BA41FB7227FF171E00F7A0F9 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA41FB7127FF171E00F7A0F9 /* HomePage.storyboard */; };
 		BA41FB7427FF252C00F7A0F9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41FB7327FF252C00F7A0F9 /* CollectionViewCell.swift */; };
 		BA41FB7627FF33A900F7A0F9 /* CarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41FB7527FF33A900F7A0F9 /* CarouselModel.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchVisual.storyboard; sourceTree = "<group>"; };
+		DF00F28127FF483A00A41263 /* TesCompare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TesCompare.storyboard; sourceTree = "<group>"; };
+		DF00F28327FF488C00A41263 /* TesCompareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesCompareVC.swift; sourceTree = "<group>"; };
+		DF8862BE2801909C00882450 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		BA41FB7127FF171E00F7A0F9 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		BA41FB7327FF252C00F7A0F9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BA41FB7527FF33A900F7A0F9 /* CarouselModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselModel.swift; sourceTree = "<group>"; };
@@ -137,6 +145,7 @@
 				DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */,
 				DF00F28127FF483A00A41263 /* TesCompare.storyboard */,
 				DF00F28327FF488C00A41263 /* TesCompareVC.swift */,
+				DF8862BE2801909C00882450 /* GridView.swift */,
 			);
 			path = WatchVisual;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				BA41FB7427FF252C00F7A0F9 /* CollectionViewCell.swift in Sources */,
 				DFCDDB2E27FD74E200098ABA /* SceneDelegate.swift in Sources */,
 				DFCDDB4C27FDBA4F00098ABA /* ReflectionViewController.swift in Sources */,
+				DF8862BF2801909C00882450 /* GridView.swift in Sources */,
 				DFCDDB5E27FDBBCD00098ABA /* LauncherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
