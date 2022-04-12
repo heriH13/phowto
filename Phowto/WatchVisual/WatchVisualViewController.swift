@@ -49,6 +49,26 @@ class WatchVisualViewController : UIViewController, UINavigationControllerDelega
         nextModule = 1
         openPage.addTarget(self, action: #selector(openPagePressed(_: )), for: .touchUpInside)
         openPage.isHidden = true
+        
+//        if !isVisible(view: view1) {
+//            print("********* VIEW 3 IS VISIBLE *****")
+//        } else {
+//            print("************* VIEW NOT VISIBLE ******")
+//        }
+        
+    }
+    
+    func isVisible(view: UIView) -> Bool {
+        func isVisible(view: UIView, inView: UIView?) -> Bool {
+            guard let inView = inView else { return true }
+            let viewFrame = inView.convert(view.bounds, from: view)
+            if viewFrame.intersects(inView.bounds) {
+                return isVisible(view: view, inView: inView.superview)
+            }
+            return false
+        }
+        view.superview?.backgroundColor = .green
+        return isVisible(view: view, inView: view.superview)
     }
     
     func setUpViewBtn(){
