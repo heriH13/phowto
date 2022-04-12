@@ -18,11 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 //        guard let _ = (scene as? UIWindowScene) else { return }
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        let vc = UIStoryboard(name: "WatchVisual", bundle: nil)
-        let root = vc.instantiateViewController(withIdentifier: "watchVisualSB")
-        window?.rootViewController = root
-        window?.makeKeyAndVisible()
+                        
+                        window = UIWindow(windowScene: windowScene)
+
+                let root = UIStoryboard(name: "HomePage", bundle: nil)
+                let initialController = root.instantiateViewController(withIdentifier: "Navigation")
+        
+                window?.rootViewController = initialController
+                        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

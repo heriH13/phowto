@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF00F28027FF0C4600A41263 /* WatchVisual.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */; };
-		DF00F28227FF483A00A41263 /* TesCompare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF00F28127FF483A00A41263 /* TesCompare.storyboard */; };
-		DF00F28427FF488C00A41263 /* TesCompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00F28327FF488C00A41263 /* TesCompareVC.swift */; };
+		BA41FB7227FF171E00F7A0F9 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA41FB7127FF171E00F7A0F9 /* HomePage.storyboard */; };
+		BA41FB7427FF252C00F7A0F9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41FB7327FF252C00F7A0F9 /* CollectionViewCell.swift */; };
+		BA41FB7627FF33A900F7A0F9 /* CarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41FB7527FF33A900F7A0F9 /* CarouselModel.swift */; };
 		DFCDDB2C27FD74E200098ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB2B27FD74E200098ABA /* AppDelegate.swift */; };
 		DFCDDB2E27FD74E200098ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB2D27FD74E200098ABA /* SceneDelegate.swift */; };
 		DFCDDB3027FD74E200098ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDDB2F27FD74E200098ABA /* ViewController.swift */; };
@@ -29,9 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DF00F27F27FF0C4600A41263 /* WatchVisual.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchVisual.storyboard; sourceTree = "<group>"; };
-		DF00F28127FF483A00A41263 /* TesCompare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TesCompare.storyboard; sourceTree = "<group>"; };
-		DF00F28327FF488C00A41263 /* TesCompareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesCompareVC.swift; sourceTree = "<group>"; };
+		BA41FB7127FF171E00F7A0F9 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		BA41FB7327FF252C00F7A0F9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		BA41FB7527FF33A900F7A0F9 /* CarouselModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselModel.swift; sourceTree = "<group>"; };
 		DFCDDB2827FD74E200098ABA /* Phowto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phowto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCDDB2B27FD74E200098ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCDDB2D27FD74E200098ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				DFCDDB5B27FDBBC200098ABA /* HomePageViewController.swift */,
+				BA41FB7127FF171E00F7A0F9 /* HomePage.storyboard */,
+				BA41FB7327FF252C00F7A0F9 /* CollectionViewCell.swift */,
+				BA41FB7527FF33A900F7A0F9 /* CarouselModel.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -244,7 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF00F28027FF0C4600A41263 /* WatchVisual.storyboard in Resources */,
+				BA41FB7227FF171E00F7A0F9 /* HomePage.storyboard in Resources */,
 				DFCDDB3827FD74E200098ABA /* LaunchScreen.storyboard in Resources */,
 				DF00F28227FF483A00A41263 /* TesCompare.storyboard in Resources */,
 				DFCDDB3527FD74E200098ABA /* Assets.xcassets in Resources */,
@@ -264,12 +267,14 @@
 				DFCDDB5227FDBA9B00098ABA /* MyAlbumViewController.swift in Sources */,
 				DFCDDB5A27FDBBB700098ABA /* SelectedModuleViewController.swift in Sources */,
 				DFCDDB4E27FDBA8400098ABA /* CompareViewController.swift in Sources */,
+				BA41FB7627FF33A900F7A0F9 /* CarouselModel.swift in Sources */,
 				DFCDDB5027FDBA9100098ABA /* DescriptionViewController.swift in Sources */,
 				DFCDDB5427FDBB9B00098ABA /* AlbumPageViewController.swift in Sources */,
 				DFCDDB5827FDBBAE00098ABA /* WatchVisualViewController.swift in Sources */,
 				DFCDDB5C27FDBBC200098ABA /* HomePageViewController.swift in Sources */,
 				DF00F28427FF488C00A41263 /* TesCompareVC.swift in Sources */,
 				DFCDDB5627FDBBA400098ABA /* SearchPageViewController.swift in Sources */,
+				BA41FB7427FF252C00F7A0F9 /* CollectionViewCell.swift in Sources */,
 				DFCDDB2E27FD74E200098ABA /* SceneDelegate.swift in Sources */,
 				DFCDDB4C27FDBA4F00098ABA /* ReflectionViewController.swift in Sources */,
 				DFCDDB5E27FDBBCD00098ABA /* LauncherViewController.swift in Sources */,
